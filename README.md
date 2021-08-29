@@ -32,6 +32,12 @@ Gracias por contribuir con el diseño, bocetos (mockups) y assets del sitio web.
 A todos los miembros y sus aportaciones.
 <br>
 
+## Otras ligas de intéres
+Nuestro sitio: https://www.weborder.dev<br>
+Comunidad de facebook: https://www.facebook.com/groups/weborderdev<br>
+Nuestro servidor de discord:https://discord.gg/pGg96N5RVF<br>
+<br>
+
 ## Licencia
 **GNU General Public License v3.0**<br>
 https://github.com/weborder-dev/weborder-website/blob/main/LICENSE
