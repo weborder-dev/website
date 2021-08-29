@@ -35,8 +35,7 @@ A todos los miembros y sus aportaciones.
 ## Otras ligas de intéres
 Nuestro sitio: https://www.weborder.dev<br>
 Comunidad de facebook: https://www.facebook.com/groups/weborderdev<br>
-Nuestro servidor de discord:https://discord.gg/pGg96N5RVF<br>
-<br>
+Nuestro servidor de discord: https://discord.gg/pGg96N5RVF<br>
 
 ## Licencia
 **GNU General Public License v3.0**<br>
