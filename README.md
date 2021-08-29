@@ -15,24 +15,23 @@ El sitio se compone de tres secciones principales:
 | Actividades | Log de actividades general. |
 <br>
 
-**Mockups y assets del sitio:**
+**Mockups y assets del sitio:**<br>
 https://drive.google.com/drive/folders/1DJRd9PAfxVtVE7P3FxchuesUuhSv8T7r?usp=sharing
 <br>
 
 ## Tecnologías
-¡Mira mamá, sin frameworks!
+¡Mira mamá, sin frameworks!<br>
 HTML, CSS / Sass, JS / TypeScript
 <br>
 
 ## Agradecimientos
-**Binmatter**
-https://www.binmatter.com
+**Binmatter**<br>
+https://www.binmatter.com<br>
 Gracias por contribuir con el diseño, bocetos (mockups) y assets del sitio web.
 
----
 A todos los miembros y sus aportaciones.
 <br>
 
 ## Licencia
-**GNU General Public License v3.0**
+**GNU General Public License v3.0**<br>
 https://github.com/weborder-dev/weborder-website/blob/main/LICENSE
