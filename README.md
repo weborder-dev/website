@@ -24,6 +24,18 @@ https://drive.google.com/drive/folders/1DJRd9PAfxVtVE7P3FxchuesUuhSv8T7r?usp=sha
 HTML, CSS / Sass, JS / TypeScript
 <br>
 
+**Estructura de folders** <br>
+- /weborder.dev
+    - /libraries -> Utilizado sólo para los archivos de librerías externas
+    - /css -> el CSS minificado y exportado del SASS (no se tienen que editar manualmente)
+    - /sass 
+    - /js 
+    - /images 
+    - /html
+        - index.html
+        - meetups.html
+        - logs.html
+
 ## Agradecimientos
 **Binmatter**<br>
 https://www.binmatter.com<br>
