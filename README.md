@@ -25,16 +25,19 @@ HTML, CSS / Sass, JS / TypeScript
 <br>
 
 **Estructura de folders** <br>
-- /weborder.dev
-    - /libraries -> Utilizado sólo para los archivos de librerías externas
-    - /css -> el CSS minificado y exportado del SASS (no se tienen que editar manualmente)
-    - /sass 
-    - /js 
-    - /images 
-    - /html
-        - index.html
-        - meetups.html
-        - logs.html
+- /src
+    - /assets: Imágenes, tipografías, entre otros.
+    - /scripts: Archivos TypeScript que son transpilados a JS
+    - /scss: Archivos Sass que son transpilados a CSS
+
+## Uso
+El proyecto es desarrollado con tecnologías como TypeScript y Sass que requieren transpilar el código para lo que se utiliza Node.js.
+
+Instalación de dependencias
+```npm install```
+
+Servidor Web para desarrollo
+```npm run start```
 
 ## Agradecimientos
 **Binmatter**<br>
