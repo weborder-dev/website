@@ -53,5 +53,9 @@ Comunidad de facebook: https://www.facebook.com/groups/weborderdev<br>
 Nuestro servidor de discord: https://discord.gg/pGg96N5RVF<br>
 
 ## Licencia
-**GNU General Public License v3.0**<br>
+**Código fuente:**
+GNU General Public License v3.0<br>
 https://github.com/weborder-dev/weborder-website/blob/main/LICENSE
+
+**Assets:**
+Todos los derechos reservados a sus respectivos autores.
