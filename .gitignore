@@ -104,5 +104,4 @@ dist
 .tern-port
 
 # Ignore transpiled code
-public/js
-public/css
+public
