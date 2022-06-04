@@ -8,14 +8,14 @@ const pagesWebpack = [];
 
 // General Rules
 const typeScriptRules = {
-    test: /\.ts$/,
-    use: 'ts-loader',
-    include: [path.resolve(__dirname, 'src')]
+  test: /\.ts$/,
+  use: 'ts-loader',
+  include: [path.resolve(__dirname, 'src')]
 };
 const htmlRules = {
-    test: /\.html$/i,
-    use: 'html-loader'
-}
+  test: /\.html$/i,
+  use: 'html-loader'
+};
 
 // Pages/Views
 const views = fs.readdirSync('./src/views');

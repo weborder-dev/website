@@ -1,3 +1,11 @@
+@import './reset.scss';
+
 body {
-    background: white;
+  background: white;
 }
+
+.navigation {
+  background-color: red;
+}
+
+@import './landing.scss';
