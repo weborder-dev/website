@@ -1,5 +1,7 @@
+@use './colors.scss' as colors;
+
 .navigation {
-  background: red;
+  background: colors.$base-color;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
