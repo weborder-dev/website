@@ -1,0 +1,32 @@
+.navigation {
+  background: red;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  padding: 2rem 0;
+
+  ul {
+    display: flex;
+  }
+
+  li {
+    margin-right: 1rem;
+    padding: 1rem 0;
+    cursor: pointer;
+  }
+  /*
+  li.button {
+    background-color: white;
+    border: 3px solid black;
+    padding: 1rem;
+  }
+  */
+
+  &__button-background {
+    background-color: white;
+    border: 2px solid black;
+    height: 50px;
+    width: 100px;
+  }
+}
