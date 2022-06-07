@@ -8,17 +8,17 @@
   align-items: center;
   padding: 2rem 0;
 
-  img {
+  &__logo {
     pointer-events: none; // this is to prevent propagation issues with click event
   }
 
-  ul {
+  &__link-container {
     display: flex;
-  }
 
-  li {
-    margin-right: 1rem;
-    padding: 1rem 0;
-    cursor: pointer;
+    li {
+      margin-right: 1rem;
+      padding: 1rem 0;
+      cursor: pointer;
+    }
   }
 }
