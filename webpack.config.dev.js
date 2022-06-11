@@ -12,7 +12,7 @@ module.exports = merge(baseConfig, {
   mode: 'development',
   devtool: 'inline-source-map',
   devServer: {
-    watchFiles: ['src/**/*.ts', 'src/**/*.scss', 'src/*.html']
+    watchFiles: ['src/**/*.ts', 'src/**/*.scss', 'src/**/*.html']
   },
 
   module: {
