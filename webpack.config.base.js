@@ -1,6 +1,7 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const HtmlWebpackPartialsPlugin = require('html-webpack-partials-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
+const ExtraWatchWebpackPlugin = require('extra-watch-webpack-plugin');
 const fs = require('fs');
 const path = require("path");
 const entryScript = 'src/app.ts';
@@ -8,13 +9,13 @@ const pagesWebpack = [];
 
 // General Rules
 const typeScriptRules = {
-  test: /\.ts$/,
-  use: 'ts-loader',
-  include: [path.resolve(__dirname, 'src')]
+    test: /\.ts$/,
+    use: 'ts-loader',
+    include: [path.resolve(__dirname, 'src')]
 };
 const htmlRules = {
-  test: /\.html$/i,
-  use: 'html-loader'
+    test: /\.html$/i,
+    use: 'html-loader'
 };
 
 // Pages/Views
@@ -25,7 +26,7 @@ views.forEach((view) => {
             filename: view,
             template: 'src/views/_template.html'
         }));
-    
+
         pagesWebpack.push(new HtmlWebpackPartialsPlugin({
             path: path.join(__dirname, './src/views/' + view),
             location: 'content',
@@ -41,13 +42,19 @@ pagesWebpack.push(new CopyWebpackPlugin({
     }]
 }));
 
+pagesWebpack.push(
+    new ExtraWatchWebpackPlugin({
+        dirs: [ path.join(__dirname, 'src/views') ],
+    }),
+);
+
 module.exports = {
     entry: {
         main: path.resolve(__dirname, entryScript)
     },
     plugins: pagesWebpack,
     module: {
-        rules: [ typeScriptRules, htmlRules ]
+        rules: [typeScriptRules, htmlRules]
     },
     output: {
         path: path.resolve(__dirname, 'public'),
