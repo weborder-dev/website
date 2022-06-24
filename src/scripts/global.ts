@@ -1,66 +1,66 @@
 class Global {
-  constructor() {
-    window.addEventListener('load', () => {
-      this.onPageLoad();
-    });
-
-    // navigation bar
-    let navScrollButtons = [
-      ...document.getElementsByClassName('navigation__scroll-cta')
-    ];
-
-    navScrollButtons.forEach((singleButton) => {
-      singleButton.addEventListener('click', (e: Event) => {
-        e.stopPropagation();
-        this.onScrollButtonClick(e);
+   constructor() {
+      window.addEventListener('load', () => {
+         this.onPageLoad();
       });
-    });
-  }
 
-  isLandingPage(): Boolean {
-    const currentURL = window.location.pathname;
-    return Boolean(currentURL === '/' || currentURL.includes('index.html'));
-  }
+      // navigation bar
+      let navScrollButtons = [
+         ...document.getElementsByClassName('navigation__scroll-cta')
+      ];
 
-  onPageLoad() {
-    console.log('onload');
+      navScrollButtons.forEach((singleButton) => {
+         singleButton.addEventListener('click', (e: Event) => {
+            e.stopPropagation();
+            this.onScrollButtonClick(e);
+         });
+      });
+   }
 
-    if (this.isLandingPage()) {
-      this.onLandingPageLoad();
-      return;
-    }
-  }
+   isLandingPage(): Boolean {
+      const currentURL = window.location.pathname;
+      return Boolean(currentURL === '/' || currentURL.includes('index.html'));
+   }
 
-  onLandingPageLoad() {
-    console.log('onload landing');
-    const queryParams = new URLSearchParams(window.location.search);
-    const sectionParam = queryParams.get('section');
+   onPageLoad() {
+      console.log('onload');
 
-    if (sectionParam) {
-      this.scrollToElement(sectionParam);
-    }
-  }
+      if (this.isLandingPage()) {
+         this.onLandingPageLoad();
+         return;
+      }
+   }
 
-  scrollToElement(targetElementId: string) {
-    if (targetElementId) {
-      const targetElement = document.getElementById(targetElementId);
-      targetElement?.scrollIntoView({ behavior: 'smooth' });
-    }
-  }
+   onLandingPageLoad() {
+      console.log('onload landing');
+      const queryParams = new URLSearchParams(window.location.search);
+      const sectionParam = queryParams.get('section');
 
-  onScrollButtonClick(e: Event) {
-    const currentElement = e.target as HTMLElement;
-    const targetElementId = currentElement.getAttribute('scroll-to');
-    const currentURL = window.location.pathname;
+      if (sectionParam) {
+         this.scrollToElement(sectionParam);
+      }
+   }
 
-    // redirecting to landing page if we are in another page
-    if (!this.isLandingPage()) {
-      window.location.assign(`/index.html?section=${targetElementId}`);
-      return;
-    }
+   scrollToElement(targetElementId: string) {
+      if (targetElementId) {
+         const targetElement = document.getElementById(targetElementId);
+         targetElement?.scrollIntoView({ behavior: 'smooth' });
+      }
+   }
 
-    this.scrollToElement(targetElementId ?? '');
-  }
+   onScrollButtonClick(e: Event) {
+      const currentElement = e.target as HTMLElement;
+      const targetElementId = currentElement.getAttribute('scroll-to');
+      const currentURL = window.location.pathname;
+
+      // redirecting to landing page if we are in another page
+      if (!this.isLandingPage()) {
+         window.location.assign(`/index.html?section=${targetElementId}`);
+         return;
+      }
+
+      this.scrollToElement(targetElementId ?? '');
+   }
 }
 
 new Global();
