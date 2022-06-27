@@ -1,3 +1,60 @@
+@font-face {
+   font-family: 'Gordita';
+   src: url(../assets/fonts/gordita-regular.otf);
+   font-weight: normal;
+   font-style: normal;
+}
+
+@font-face {
+   font-family: 'Gordita Italic';
+   src: url(../assets/fonts/gordita-regular-italic.otf);
+   font-weight: normal;
+   font-style: italic;
+}
+
+@font-face {
+   font-family: 'Gordita Light';
+   src: url(../assets/fonts/gordita-light.otf);
+   font-weight: normal;
+   font-style: normal;
+}
+
+@font-face {
+   font-family: 'Gordita Light Italic';
+   src: url(../assets/fonts/gordita-light-italic.otf);
+   font-weight: normal;
+   font-style: italic;
+}
+
+@font-face {
+   font-family: 'Gordita Semibold';
+   src: url(../assets/fonts/gordita-semibold.otf);
+   font-weight: normal;
+   font-style: normal;
+}
+
+@font-face {
+   font-family: 'Gordita Semibold Italic';
+   src: url(../assets/fonts/gordita-semibold-italic.otf);
+   font-weight: normal;
+   font-style: italic;
+}
+
+@font-face {
+   font-family: 'Gordita Bold';
+   src: url(../assets/fonts/gordita-bold.otf);
+   font-weight: normal;
+   font-style: normal;
+}
+
+@font-face {
+   font-family: 'Gordita Bold Italic';
+   src: url(../assets/fonts/gordita-bold-italic.otf);
+   font-weight: normal;
+   font-style: normal;
+}
+
 body {
    background: white;
+   font-family: 'Gordita', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
