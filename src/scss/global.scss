@@ -59,3 +59,34 @@ body {
    font-family: 'Gordita', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
    letter-spacing: 0.1rem;
 }
+
+h1 {
+   font-size: 2.6rem;
+   font-family: 'Gordita Bold';
+}
+
+p {
+   margin: 1rem 0;
+}
+
+.container {
+   width: calc(100% - 2rem);
+   padding: 0 1rem;
+   max-width: 1200px;
+   margin: 0 auto;
+   position: relative;
+}
+
+.show-large {
+   display: none;
+}
+
+@media screen and (min-width: 1280px) {
+   .hide-large {
+      display: none;
+   }
+
+   .show-large {
+      display: block;
+   }
+}
