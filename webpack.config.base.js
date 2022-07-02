@@ -28,6 +28,12 @@ views.forEach((view) => {
       }));
 
       pagesWebpack.push(new HtmlWebpackPartialsPlugin({
+         path: path.join(__dirname, './src/views/_navigation.html'),
+         location: 'navigation',
+         template_filename: view
+      }));
+
+      pagesWebpack.push(new HtmlWebpackPartialsPlugin({
          path: path.join(__dirname, './src/views/' + view),
          location: 'content',
          template_filename: view
