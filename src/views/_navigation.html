@@ -1,15 +1,17 @@
-<nav class="navigation">
-   <div class="navigation__scroll-cta" scroll-to="landing-header">
-      <img class="navigation__logo" src="../assets/images/header_logo.png" />
+<div class="navigation scrolling">
+   <img class="navigation__logo navigation__scroll-cta" scroll-to="landing-header" src="../assets/images/header_logo.png" />
+   <div class="navigation__menu">
+      <div id="menuToggle">
+         <input type="checkbox" />
+         <span></span>
+         <span></span>
+         <span></span>
+         <ul id="menu">
+            <a href="/index.html#landing-about"><li>¿Quiénes somos?</li></a>
+            <a href="/index.html#landing-mission"><li>Misión y Visión</li></a>
+            <a href="/meetups.html"><li class="nav-button">Meetups</li></a>
+            <a href="/activities.html"><li class="nav-button">Actividades</li></a>
+         </ul>
+      </div>
    </div>
-   <ul class="navigation__link-container">
-      <li class="navigation__scroll-cta" scroll-to="landing-about">
-         ¿Quiénes somos?
-      </li>
-      <li class="navigation__scroll-cta" scroll-to="landing-mission">
-         Misión y Visión
-      </li>
-      <li class="navigation__button"><a href="/meetups.html">Meetups</a></li>
-      <li class="navigation__button"><a href="/activities.html">Actividades</a></li>
-   </ul>
-</nav>
+</div>
