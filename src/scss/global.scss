@@ -34,22 +34,8 @@
 }
 
 @font-face {
-   font-family: 'Gordita Semibold Italic';
-   src: url(../assets/fonts/gordita-semibold-italic.otf);
-   font-weight: normal;
-   font-style: italic;
-}
-
-@font-face {
    font-family: 'Gordita Bold';
    src: url(../assets/fonts/gordita-bold.otf);
-   font-weight: normal;
-   font-style: normal;
-}
-
-@font-face {
-   font-family: 'Gordita Bold Italic';
-   src: url(../assets/fonts/gordita-bold-italic.otf);
    font-weight: normal;
    font-style: normal;
 }
@@ -72,7 +58,7 @@ p {
 .container {
    width: calc(100% - 2rem);
    padding: 0 1rem;
-   max-width: 1200px;
+   max-width: 1280px;
    margin: 0 auto;
    position: relative;
 }

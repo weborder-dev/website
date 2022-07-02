@@ -1,15 +1,26 @@
 .landing {
 
-   // these styles are added just for testing purposes, feel free to remove them
-   h1 {
-      font-size: 5rem;
-      color: blue;
-   }
+   &__cover {
+      display: flex;
+      align-items: center;
+      overflow: hidden;
 
-   section {
-      width: 100%;
-      height: 100vh;
-   }
+      #cover-copy {
+         flex: 2;
+         flex-shrink: 0;
+         p {
+            font-size: 1.3rem;
+            line-height: 1.5rem;
+            max-width: 500px;
+         }
+      }
 
-   // end
+      #cover-illustrations {
+         flex: 3;
+         background-image: url(../assets/home/home-cover-background.png);
+         background-repeat: no-repeat;
+         background-position-x: left;
+         text-align: right;
+      }
+   }
 }
