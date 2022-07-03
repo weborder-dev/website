@@ -1,8 +1,6 @@
 .landing {
 
    &__cover {
-      display: flex;
-      align-items: center;
       position: relative;
       overflow: hidden;
 
@@ -14,15 +12,6 @@
             line-height: 1.5rem;
          }
       }
-
-      #cover-illustrations {
-         flex: 3;
-         background-image: url(../assets/images/home/home-cover-background.png);
-         background-repeat: no-repeat;
-         background-position-x: left;
-         text-align: right;
-      }
-
    }
 
    @media screen and (min-width: 1280px) {
@@ -34,6 +23,20 @@
             left: 40%;
             content: '';
             background-image: url(../assets/images/home/home-cover-background.png), linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0) 400px, #3a09b3 400px, #3a09b3 100%);
+            background-repeat: no-repeat;
+            background-position-x: left;
+            background-size: auto 100%;
+            z-index: -2;
+         }
+
+         &::after {
+            width: 45%;
+            height: 100%;
+            position: absolute;
+            left: 55%;
+            top: 0;
+            content: '';
+            background-image: url(../assets/images/home/home-cover-robot.png);
             background-repeat: no-repeat;
             background-position-x: left;
             background-size: auto 100%;
