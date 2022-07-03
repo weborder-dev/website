@@ -1,6 +1,5 @@
 // Import stylesheets here
 import './scss/reset.scss';
-import './scss/colors.scss';
 import './scss/global.scss';
 import './scss/landing.scss';
 import './scss/navigation.scss';

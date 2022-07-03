@@ -1,3 +1,5 @@
+@use './variables.scss' as var;
+
 .landing {
 
    &__cover {
@@ -14,7 +16,7 @@
       }
    }
 
-   @media screen and (min-width: 1280px) {
+   @media screen and (min-width: var.$resolution-medium) {
       &__cover {
          &::before {
             width: 60%;
