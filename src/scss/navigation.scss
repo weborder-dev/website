@@ -6,6 +6,10 @@
    padding: 1rem;
    z-index: 10;
 
+   .container {
+      padding: 0rem !important;
+   }
+
    &__logo {
       cursor: pointer;
    }
@@ -86,7 +90,7 @@
       #menu {
          position: absolute;
          width: 300px;
-         right: calc(-300px);
+         right: calc(-300px - 1rem);
          margin: -100px 0 0 -50px;
          padding: 50px;
          padding-top: 125px;
@@ -149,10 +153,6 @@
 
 @media screen and (min-width: var.$resolution-large) {
    .navigation {
-
-      width: var.$resolution-large;
-      left: 50%;
-      transform: translateX(-50%);
 
       &.scrolling {
          #menuToggle #menu {

@@ -56,9 +56,8 @@ p {
 }
 
 .container {
-   width: calc(100% - 2rem);
+   width: min(100%, 1280px);
    padding: 0 1rem;
-   max-width: 1280px;
    margin: 0 auto;
    position: relative;
 }
