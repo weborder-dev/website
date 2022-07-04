@@ -6,7 +6,7 @@
       min-height: 400px;
    }
 
-   &__cover {
+   #landing-cover {
       position: relative;
       overflow: hidden;
       background-color: #ededed;
@@ -14,6 +14,7 @@
       #cover-copy {
          width: min(100%, 500px);
          padding-top: 9rem;
+         padding-bottom: 4rem;
          p {
             font-size: 1.2rem;
             line-height: 1.5rem;
@@ -22,7 +23,7 @@
    }
 
    @media screen and (min-width: var.$resolution-medium) {
-      &__cover {
+      #landing-cover{
          &::before {
             width: 60%;
             height: 100%;
