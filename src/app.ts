@@ -5,4 +5,6 @@ import './scss/landing.scss';
 import './scss/navigation.scss';
 
 // Import TS files here
-import './scripts/global.ts';
+import './scripts/navigation.ts';
+
+

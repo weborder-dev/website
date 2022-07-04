@@ -2,6 +2,10 @@
 
 .landing {
 
+   section {
+      min-height: 400px;
+   }
+
    &__cover {
       position: relative;
       overflow: hidden;
