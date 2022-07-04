@@ -1,24 +1,238 @@
-@use './colors.scss'as colors;
+@use './variables.scss' as var;
 
 .navigation {
-   background: colors.$demo-color;
-   display: flex;
-   flex-direction: row;
-   justify-content: space-around;
-   align-items: center;
-   padding: 2rem 0;
+   position: fixed;
+   width: 100%;
+   padding: 1rem;
+   z-index: 10;
 
-   &__logo {
-      pointer-events: none; // this is to prevent propagation issues with click event
+   .container {
+      padding: 0rem !important;
    }
 
-   &__link-container {
-      display: flex;
+   #menuToggle {
+      display: block;
+      position: absolute;
+      top: 50%;
+      right: 0px;
+      transform: translateY(-50%);
+      padding-right: 1rem;
+      z-index: 1;   
+      -webkit-user-select: none;
+      user-select: none;
 
-      li {
-         margin-right: 1rem;
-         padding: 1rem 0;
-         cursor: pointer;
+      a {
+         text-decoration: none;
+         color: var.$color-light;
+         transition: color 0.3s ease;
+         display: inline-block;
       }
+
+      input {
+         display: block;
+         width: 35px;
+         height: 35px;
+         position: absolute;
+         top: -7px;
+         left: -5px;
+
+         cursor: pointer;
+
+         opacity: 0; /* hide this */
+         z-index: 2; /* and place it over the hamburger */
+
+         -webkit-touch-callout: none;
+      }
+
+      span {
+         display: block;
+         width: 33px;
+         height: 4px;
+         margin-bottom: 5px;
+         position: relative;
+         background: var.$color-dark;
+         border-radius: 3px;  
+         z-index: 1;
+         
+         transform-origin: 4px 0px;
+         transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+                     background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+                     opacity 0.55s ease;
+      }
+
+      span:first-child {
+         transform-origin: 0% 0%;
+      }
+
+      span:nth-last-child(2) {
+         transform-origin: 0% 100%;
+      }
+
+      input:checked ~ span {
+         opacity: 1;
+         transform: rotate(45deg) translate(-2px, -1px);
+         background: var.$color-light;
+      }
+
+      input:checked ~ span:nth-last-child(3) {
+         opacity: 0;
+         transform: rotate(0deg) scale(0.2, 0.2);
+      }
+
+      input:checked ~ span:nth-last-child(2) {
+         transform: rotate(-45deg) translate(0, -1px);
+      }
+
+      #menu {
+         position: absolute;
+         width: 300px;
+         right: calc(-300px - 1rem);
+         margin: -100px 0 0 -50px;
+         padding: 50px;
+         padding-top: 125px;
+
+         background: var.$color-primary;
+         list-style-type: none;
+         -webkit-font-smoothing: antialiased;
+
+         transform-origin: 0% 0%;
+         transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+
+         li {
+            padding: 10px 0;
+            font-size: 1.1rem;
+            color: var.$color-light;
+         }
+      }
+
+      input:checked ~ #menu {
+         transform: translate(calc(-100%), 0);
+      }
+   }
+
+   &::before {
+      content: '';
+      width: 100vw;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background: var.$color-light;
+      opacity: 0.9;
+      z-index: -1;
+      transform: translateY(-100%);
+      transition: all 0.25s;
+   }
+
+   &.scrolling {
+      &::before {
+         transform: translateY(0%);
+      }
+
+      #menuToggle {
+         span {
+            background: var.$color-dark;
+         }
+      }
+   }
+}
+
+@media screen and (min-width: var.$resolution-medium) {
+   .navigation {
+      #menuToggle {
+         span {
+            background: var.$color-light;
+         }
+      }
+   }
+}
+
+@media screen and (min-width: var.$resolution-large) {
+   .navigation {
+
+      &.scrolling {
+         #menuToggle #menu {
+            li {
+               color: var.$color-primary;
+            }
+         }
+      }
+
+      #menuToggle {
+         top: 50%;
+         transform: translateY(-50%);
+
+         span, input {
+            display: none;
+         }
+
+         #menu {
+            position: relative;
+            width: 100%;
+            right: 0;
+            background: none;
+            padding: 0;
+            margin: 0;
+            text-align: right;
+            transition: all 0s;
+
+            li {
+               color: var.$color-light;
+               margin-left: 1.5em;
+               padding: 1em 0;
+               font-family: 'Gordita Bold';
+               display: inline-block;
+
+               &.nav-button {
+                  margin-left: 1em !important;
+                  height: 3em;
+                  position: relative;
+                  padding: 1.2em 1em !important;
+                  color: var.$color-dark;
+                  text-decoration: none;
+                  z-index: 1;
+         
+                  &::before {
+                     display: block;
+                     position: absolute;
+                     content: " ";
+                     width: 100%;
+                     height: 100%;
+                     top: 0;
+                     left: 0;
+                     background: var.$color-dark;
+                     z-index: -2;
+                     clip-path: polygon(0 0, 100% 7%, 92% 98%, 5% 100%);
+                  }
+         
+                  &::after {
+                     display: block;
+                     position: absolute;
+                     content: " ";
+                     width: calc(100% - 6px);
+                     height: calc(100% - 6px);
+                     top: 3px;
+                     left: 3px;
+                     background: var.$color-light;
+                     z-index: -1;
+                     clip-path: polygon(0 0, 100% 7%, 92% 98%, 5% 100%);
+                  }
+
+                  &:hover {
+                     color: var.$color-light;
+                     &::after {
+                        background: var.$color-primary;
+                     }
+                  }
+               }
+            }
+         }
+
+         input:checked ~ #menu {
+            transform: translateX(0);
+         }
+      }
+
+      
    }
 }

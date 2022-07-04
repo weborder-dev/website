@@ -1,3 +1,79 @@
+@use './variables.scss' as var;
+
+@font-face {
+   font-family: 'Gordita';
+   src: url(../assets/fonts/gordita-regular.otf);
+   font-weight: normal;
+   font-style: normal;
+}
+
+@font-face {
+   font-family: 'Gordita Italic';
+   src: url(../assets/fonts/gordita-regular-italic.otf);
+   font-weight: normal;
+   font-style: italic;
+}
+
+@font-face {
+   font-family: 'Gordita Light';
+   src: url(../assets/fonts/gordita-light.otf);
+   font-weight: normal;
+   font-style: normal;
+}
+
+@font-face {
+   font-family: 'Gordita Light Italic';
+   src: url(../assets/fonts/gordita-light-italic.otf);
+   font-weight: normal;
+   font-style: italic;
+}
+
+@font-face {
+   font-family: 'Gordita Semibold';
+   src: url(../assets/fonts/gordita-semibold.otf);
+   font-weight: normal;
+   font-style: normal;
+}
+
+@font-face {
+   font-family: 'Gordita Bold';
+   src: url(../assets/fonts/gordita-bold.otf);
+   font-weight: normal;
+   font-style: normal;
+}
+
 body {
    background: white;
+   font-family: 'Gordita', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+   letter-spacing: 0.1rem;
+}
+
+h1 {
+   font-size: 2.6rem;
+   font-family: 'Gordita Bold';
+}
+
+p {
+   margin: 1rem 0;
+}
+
+.container {
+   width: min(100%, var.$resolution-large);
+   padding: 0 1rem;
+   margin: 0 auto;
+   position: relative;
+}
+
+.show-large {
+   display: none;
+}
+
+@media screen and (min-width: var.$resolution-large) {
+   .hide-large {
+      display: none;
+   }
+
+   .show-large {
+      display: block;
+   }
 }
