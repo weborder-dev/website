@@ -3,6 +3,8 @@ class Navigation {
       document.querySelectorAll('.navigation a[href^="/index.html#"]').forEach(anchor => {
          anchor.addEventListener('click', this.anchorClick);
      });
+
+     document.addEventListener('scroll', this.scrolled);
    }
 
    anchorClick(this: HTMLElement, e: any) {
@@ -18,6 +20,15 @@ class Navigation {
       }
       else {
          window.location.assign('/index.html' + hashString);
+      }
+   }
+
+   scrolled() {
+      if (document.documentElement.scrollTop > 50) {
+         document.querySelector('.navigation')?.classList.add('scrolling');
+      }
+      else {
+         document.querySelector('.navigation')?.classList.remove('scrolling');
       }
    }
 }
