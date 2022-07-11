@@ -1,4 +1,4 @@
-class SiteNavigation {
+class Navigation {
    constructor() {
       document
          .querySelectorAll('.navigation a[href^="/index.html#"]')
@@ -37,4 +37,4 @@ class SiteNavigation {
    }
 }
 
-new SiteNavigation();
+new Navigation();

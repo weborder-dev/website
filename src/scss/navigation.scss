@@ -1,4 +1,6 @@
 @use './variables.scss' as var;
+@use './global.scss';
+
 
 .navigation {
    position: fixed;
@@ -21,9 +23,20 @@
       -webkit-user-select: none;
       user-select: none;
 
+      &.landingNav {
+
+         a {
+            text-decoration: none;
+            color: var.$color-light;
+            transition: color 0.3s ease;
+            display: inline-block;
+         }
+
+      }
+
       a {
          text-decoration: none;
-         color: var.$color-light;
+         color: var.$color-dark;
          transition: color 0.3s ease;
          display: inline-block;
       }
@@ -144,6 +157,10 @@
          }
       }
    }
+}
+
+.nav-btn-desktop {
+   @extend .wb-button;
 }
 
 @media screen and (min-width: var.$resolution-large) {
