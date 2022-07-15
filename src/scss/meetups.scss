@@ -1,22 +1,159 @@
-.meetups{
-    .intro {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        padding: 140px 16px 300px;
+@use './variables.scss' as var;
 
-        .section-title {
-            margin-bottom: 32px;
-        }
+$spacing: 300px;
+$spacing-md-res: 200px;
 
-        p {
-            max-width: 600px;
-            margin-bottom: 32px;
-        }
+.meetups {
+   .intro {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      position: relative;
+      padding: 160px 16px $spacing;
 
-        #virtual-btn {
-            margin-left: 1em;
-        }
-    }
+      .section-title {
+         margin-bottom: 32px;
+      }
+
+      p {
+         max-width: 600px;
+         margin-bottom: 32px;
+      }
+
+      .wb-button {
+         //margin-bottom: 32px;
+      }
+
+      #virtual-btn {
+         margin-left: 1em;
+      }
+   }
+   .next-meetup {
+      overflow: hidden;
+      background: rgb(166, 166, 166);
+      background: linear-gradient(
+         173deg,
+         rgba(166, 166, 166, 1) 0%,
+         rgba(26, 198, 255, 1) 0%,
+         rgba(15, 166, 215, 1) 74%,
+         rgba(20, 94, 130, 1) 100%
+      );
+      border: 3px solid var.$color-dark;
+      position: absolute;
+      bottom: 0;
+      transform: translate3d(0, 50%, 0);
+      padding: 64px 32px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+
+      .left-container {
+         position: relative;
+      }
+
+      .circle-ripple {
+         width: 225px;
+         height: 225px;
+         border-radius: 50%;
+         background-color: var.$color-light;
+         border: 10px solid var.$color-secondary;
+         box-shadow: 0 0 0 2px var.$color-light;
+         box-sizing: content-box;
+         position: absolute;
+         z-index: 1;
+         left: 50%;
+         top: 50%;
+         transform: translate3d(-50%, -50%, 0);
+
+         &--md {
+            width: 285px;
+            height: 285px;
+            background-color: var.$color-secondary;
+            border: 2px solid var.$color-light;
+            box-shadow: none;
+            opacity: 70%;
+         }
+
+         &--lg {
+            width: 265px;
+            height: 265px;
+            opacity: 30%;
+            border: 40px solid var.$color-secondary;
+         }
+      }
+
+      .circle-container {
+         z-index: 2;
+         position: relative;
+      }
+
+      .next-meetup-text {
+         z-index: 2;
+         position: relative;
+         margin-top: 40px;
+      }
+
+      h1 {
+         text-align: center;
+         line-height: 1.3em;
+         color: var.$color-primary;
+         text-shadow: -1px 1px 0 var.$color-light, 1px 1px 0 var.$color-light,
+            1px -1px 0 var.$color-light, -1px -1px 0 var.$color-light;
+      }
+
+      h2 {
+         text-align: center;
+         margin-top: 16px;
+         font-size: 1.5rem;
+      }
+
+      .screw,
+      .screw-bottom {
+         display: none;
+      }
+   }
+
+   .previous-meetups {
+      padding: $spacing 16px 32px;
+      background-color: var.$color-dark-blue;
+   }
+
+   @media screen and (min-width: var.$resolution-medium) {
+      .intro {
+         padding: 160px 16px $spacing-md-res;
+      }
+      .next-meetup {
+         flex-direction: row;
+
+         .left-container {
+            margin-right: 40px;
+         }
+
+         h1 {
+            text-align: left;
+         }
+
+         h2 {
+            text-align: left;
+         }
+
+         .screw {
+            display: block;
+            position: absolute;
+            top: 10%;
+            left: 30%;
+         }
+         .screw-bottom {
+            display: block;
+            position: absolute;
+            bottom: 30%;
+            right: 20%;
+         }
+      }
+      .previous-meetups {
+         padding: $spacing-md-res 16px 32px;
+      }
+   }
 }
