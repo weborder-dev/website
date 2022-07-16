@@ -138,6 +138,21 @@ p {
          background: var.$color-primary;
       }
    }
+
+   &--secondary {
+      color: var.$color-light;
+
+      &::after {
+         background: var.$color-primary;
+      }
+
+      &:hover {
+         color: var.$color-dark;
+         &::after {
+            background: var.$color-light;
+         }
+      }
+   }
 }
 
 @media screen and (min-width: var.$resolution-large) {

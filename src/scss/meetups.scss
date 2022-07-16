@@ -1,7 +1,7 @@
 @use './variables.scss' as var;
 
 $spacing: 300px;
-$spacing-md-res: 200px;
+$spacing-lg: 250px;
 
 .meetups {
    .intro {
@@ -10,7 +10,14 @@ $spacing-md-res: 200px;
       align-items: center;
       text-align: center;
       position: relative;
-      padding: 160px 16px $spacing;
+      padding-top: 8rem;
+
+      .container {
+         padding-bottom: $spacing;
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+      }
 
       .section-title {
          margin-bottom: 32px;
@@ -40,6 +47,7 @@ $spacing-md-res: 200px;
          rgba(20, 94, 130, 1) 100%
       );
       border: 3px solid var.$color-dark;
+      box-shadow: 0 0 0 2px var.$color-light;
       position: absolute;
       bottom: 0;
       transform: translate3d(0, 50%, 0);
@@ -116,13 +124,72 @@ $spacing-md-res: 200px;
    }
 
    .previous-meetups {
-      padding: $spacing 16px 32px;
       background-color: var.$color-dark-blue;
+      padding-bottom: var.$section-spacing;
+
+      .container {
+         padding-top: $spacing;
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+      }
+
+      .section-title {
+         color: var.$color-light;
+         flex-shrink: 0;
+         width: 100%;
+         max-width: 730px;
+         margin-top: 1rem;
+         margin-bottom: 3rem;
+      }
+
+      .meetups-list {
+         flex-shrink: 0;
+         width: 100%;
+         max-width: 730px;
+         border-left: 2px solid var.$color-secondary;
+         padding: 1px 0 0 1rem;
+      }
+
+      .bracket {
+         color: var.$color-secondary;
+         display: block;
+         margin-top: 2px;
+         margin-bottom: 1rem;
+
+         &--end {
+            margin-top: 1rem;
+            margin-bottom: 0;
+         }
+      }
+
+      pre {
+         background-color: var.$color-medium-blue;
+         color: var.$color-light;
+         margin-bottom: 1rem;
+         white-space: pre-line;
+         padding: 1rem;
+         line-height: 1rem;
+         font-family: 'Gordita';
+
+         span {
+            color: var.$color-secondary;
+            margin-left: 16px;
+         }
+      }
+   }
+
+   .more-events {
+      background-color: var.$color-yellow;
+      padding: var.$section-spacing;
    }
 
    @media screen and (min-width: var.$resolution-medium) {
       .intro {
-         padding: 160px 16px $spacing-md-res;
+         padding-top: 10rem;
+         .container {
+            padding-bottom: $spacing-lg;
+         }
       }
       .next-meetup {
          flex-direction: row;
@@ -153,7 +220,18 @@ $spacing-md-res: 200px;
          }
       }
       .previous-meetups {
-         padding: $spacing-md-res 16px 32px;
+         padding-bottom: var.$section-spacing-lg;
+
+         .container {
+            padding-top: $spacing-lg;
+         }
+
+         .section-title {
+            margin-top: 0;
+         }
+      }
+      .more-events {
+         padding: var.$section-spacing-lg;
       }
    }
 }
