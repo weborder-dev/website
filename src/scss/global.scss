@@ -57,6 +57,12 @@ p {
    margin: 1rem 0;
 }
 
+.section-title {
+   font-size: 2rem;
+   font-family: 'Gordita';
+   color: var.$color-primary;
+}
+
 .container {
    width: min(100%, var.$resolution-large);
    padding: 0 1rem;
@@ -64,8 +70,89 @@ p {
    position: relative;
 }
 
+.circle-container {
+   overflow: hidden;
+   border-radius: 50%;
+   width: 200px;
+   height: 200px;
+   background-color: var.$color-dark;
+   border: 8px solid var.$color-primary;
+   box-shadow: 0 0 0 2px var.$color-dark;
+   box-sizing: content-box;
+
+   img {
+      width: 100%;
+      min-height: 100%;
+   }
+}
+
 .show-large {
    display: none;
+}
+
+.wb-button {
+   height: 3em;
+   position: relative;
+   padding: 1em;
+
+   color: black;
+   font-size: 1em;
+   font-family: 'Gordita Semibold';
+   text-decoration: none;
+
+   z-index: 1;
+
+   background: none;
+   border: none;
+   cursor: pointer;
+
+   &::before {
+      display: block;
+      position: absolute;
+      content: ' ';
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      background: var.$color-dark;
+      z-index: -2;
+      clip-path: polygon(0 0, 100% 7%, 92% 98%, 5% 100%);
+   }
+
+   &::after {
+      display: block;
+      position: absolute;
+      content: ' ';
+      width: calc(100% - 6px);
+      height: calc(100% - 6px);
+      top: 3px;
+      left: 3px;
+      background: var.$color-light;
+      z-index: -1;
+      clip-path: polygon(0 0, 100% 7%, 92% 98%, 5% 100%);
+   }
+
+   &:hover {
+      color: var.$color-light;
+      &::after {
+         background: var.$color-primary;
+      }
+   }
+
+   &--secondary {
+      color: var.$color-light;
+
+      &::after {
+         background: var.$color-primary;
+      }
+
+      &:hover {
+         color: var.$color-dark;
+         &::after {
+            background: var.$color-light;
+         }
+      }
+   }
 }
 
 @media screen and (min-width: var.$resolution-large) {
