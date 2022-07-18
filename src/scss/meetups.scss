@@ -181,7 +181,30 @@ $spacing-lg: 250px;
 
    .more-events {
       background-color: var.$color-yellow;
-      padding: var.$section-spacing;
+      padding: var.$section-spacing 0;
+      position: relative;
+
+      h1,
+      .button-container {
+         width: 70%;
+      }
+
+      img {
+         width: 100px;
+
+         position: absolute;
+         top: 0;
+         right: 1rem;
+      }
+
+      .container {
+         text-align: center;
+      }
+
+      .section-title {
+         margin-bottom: 2rem;
+         line-height: 2.5rem;
+      }
    }
 
    @media screen and (min-width: var.$resolution-medium) {
@@ -231,7 +254,26 @@ $spacing-lg: 250px;
          }
       }
       .more-events {
-         padding: var.$section-spacing-lg;
+         padding: var.$section-spacing-lg 0;
+         position: relative;
+
+         .container {
+            max-width: 730px;
+         }
+
+         h1,
+         .button-container {
+            width: 60%;
+         }
+
+         img {
+            width: 270px;
+            position: absolute;
+            top: 0;
+            right: initial;
+            left: 50%;
+            transform: translate3d(110px, 0, 0);
+         }
       }
    }
 }
