@@ -17,7 +17,7 @@
       right: 0px;
       transform: translateY(-50%);
       padding-right: 1rem;
-      z-index: 1;   
+      z-index: 1;
       -webkit-user-select: none;
       user-select: none;
 
@@ -51,13 +51,12 @@
          margin-bottom: 5px;
          position: relative;
          background: var.$color-dark;
-         border-radius: 3px;  
+         border-radius: 3px;
          z-index: 1;
-         
+
          transform-origin: 4px 0px;
-         transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
-                     background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
-                     opacity 0.55s ease;
+         transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1),
+            background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease;
       }
 
       span:first-child {
@@ -96,7 +95,7 @@
          -webkit-font-smoothing: antialiased;
 
          transform-origin: 0% 0%;
-         transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+         transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
 
          li {
             padding: 10px 0;
@@ -149,7 +148,6 @@
 
 @media screen and (min-width: var.$resolution-large) {
    .navigation {
-
       &.scrolling {
          #menuToggle #menu {
             li {
@@ -162,7 +160,8 @@
          top: 50%;
          transform: translateY(-50%);
 
-         span, input {
+         span,
+         input {
             display: none;
          }
 
@@ -191,11 +190,11 @@
                   color: var.$color-dark;
                   text-decoration: none;
                   z-index: 1;
-         
+
                   &::before {
                      display: block;
                      position: absolute;
-                     content: " ";
+                     content: ' ';
                      width: 100%;
                      height: 100%;
                      top: 0;
@@ -204,11 +203,11 @@
                      z-index: -2;
                      clip-path: polygon(0 0, 100% 7%, 92% 98%, 5% 100%);
                   }
-         
+
                   &::after {
                      display: block;
                      position: absolute;
-                     content: " ";
+                     content: ' ';
                      width: calc(100% - 6px);
                      height: calc(100% - 6px);
                      top: 3px;
@@ -232,7 +231,5 @@
             transform: translateX(0);
          }
       }
-
-      
    }
 }
