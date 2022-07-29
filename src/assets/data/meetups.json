@@ -1,0 +1,30 @@
+[
+    {
+        "date": "Ago. 13 2022",
+        "log": "meetup 001",
+        "author": "Raul Ruiz",
+        "url": "https://youtube.com",
+        "body": "This is some description"
+    },
+    {
+        "date": "Ago. 13 2022",
+        "log": "meetup 002",
+        "author": "Raul Ruiz",
+        "url": "https://youtube.com",
+        "body": "This is some description"
+    },
+    {
+        "date": "Ago. 13 2022",
+        "log": "meetup 003",
+        "author": "Raul Ruiz",
+        "url": "https://youtube.com",
+        "body": "This is some description"
+    },
+    {
+        "date": "Ago. 13 2022",
+        "log": "meetup 004",
+        "author": "Raul Ruiz",
+        "url": "https://youtube.com",
+        "body": "This is some description"
+    }
+]
