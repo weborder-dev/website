@@ -1,0 +1,34 @@
+@use './variables.scss' as var;
+
+footer {
+   background-color: var.$color-medium-blue;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   padding: 4rem 1rem;
+
+   a {
+      outline: none;
+      text-decoration: none;
+      border: none;
+   }
+
+   .footer-logo-wrapper {
+      margin-bottom: 2rem;
+
+      img {
+         max-width: 100%;
+      }
+   }
+
+   .social-media-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+
+      img {
+         margin-right: 1rem;
+      }
+   }
+}
