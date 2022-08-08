@@ -3,7 +3,7 @@ const HtmlWebpackPartialsPlugin = require('html-webpack-partials-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const ExtraWatchWebpackPlugin = require('extra-watch-webpack-plugin');
 const fs = require('fs');
-const path = require("path");
+const path = require('path');
 const entryScript = 'src/app.ts';
 const pagesWebpack = [];
 
@@ -22,36 +22,54 @@ const htmlRules = {
 const views = fs.readdirSync('./src/views');
 views.forEach((view) => {
    if (view.charAt(0) != '_') {
-      pagesWebpack.push(new HtmlWebpackPlugin({
-         filename: view,
-         template: 'src/views/_template.html'
-      }));
+      pagesWebpack.push(
+         new HtmlWebpackPlugin({
+            filename: view,
+            template: 'src/views/_template.html'
+         })
+      );
 
-      pagesWebpack.push(new HtmlWebpackPartialsPlugin({
-         path: path.join(__dirname, './src/views/_navigation.html'),
-         location: 'navigation',
-         template_filename: view
-      }));
+      pagesWebpack.push(
+         new HtmlWebpackPartialsPlugin({
+            path: path.join(__dirname, './src/views/_navigation.html'),
+            location: 'navigation',
+            template_filename: view
+         })
+      );
 
-      pagesWebpack.push(new HtmlWebpackPartialsPlugin({
-         path: path.join(__dirname, './src/views/' + view),
-         location: 'content',
-         template_filename: view
-      }));
+      pagesWebpack.push(
+         new HtmlWebpackPartialsPlugin({
+            path: path.join(__dirname, './src/views/_footer.html'),
+            location: 'footer',
+            template_filename: view
+         })
+      );
+
+      pagesWebpack.push(
+         new HtmlWebpackPartialsPlugin({
+            path: path.join(__dirname, './src/views/' + view),
+            location: 'content',
+            template_filename: view
+         })
+      );
    }
 });
 
-pagesWebpack.push(new CopyWebpackPlugin({
-   patterns: [{
-      from: 'src/assets',
-      to: 'assets'
-   }]
-}));
+pagesWebpack.push(
+   new CopyWebpackPlugin({
+      patterns: [
+         {
+            from: 'src/assets',
+            to: 'assets'
+         }
+      ]
+   })
+);
 
 pagesWebpack.push(
    new ExtraWatchWebpackPlugin({
-      dirs: [path.join(__dirname, 'src/views')],
-   }),
+      dirs: [path.join(__dirname, 'src/views')]
+   })
 );
 
 module.exports = {
