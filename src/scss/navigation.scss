@@ -6,10 +6,6 @@
    padding: 1rem;
    z-index: 10;
 
-   &.light-text #menuToggle #menu li{
-      color: var.$color-light;
-   }
-
    .container {
       padding: 0rem !important;
    }
@@ -104,7 +100,7 @@
          li {
             padding: 10px 0;
             font-size: 1.1rem;
-            color: var.$color-primary;
+            color: var.$color-light;
          }
       }
 
@@ -141,7 +137,7 @@
 }
 
 @media screen and (min-width: var.$resolution-medium) {
-   .navigation {
+   .navigation {     
       #menuToggle {
          span {
             background: var.$color-light;
@@ -152,6 +148,11 @@
 
 @media screen and (min-width: var.$resolution-large) {
    .navigation {
+      
+      &.light-text #menuToggle #menu li{
+         color: var.$color-light;
+      }
+      
       &.scrolling {
          #menuToggle #menu {
             li {
