@@ -21,12 +21,17 @@
       margin-bottom: 3rem;
    }
 
-   .activites-list {
+   .activities-list{
       flex-shrink: 0;
       width: 100%;
       max-width: 730px;
       border-left: 2px solid var.$color-secondary;
       padding: 1px 0 0 1rem;
+   }
+
+   .month-title {
+      color: var.$color-secondary;
+      margin-bottom: 1rem;
    }
 
    .bracket {
