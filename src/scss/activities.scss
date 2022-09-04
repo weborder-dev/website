@@ -1,13 +1,15 @@
 @use './variables.scss' as var;
 
 .activities {
-   background-color: var.$color-dark-blue;
    padding-top: 8rem;
-
+   
    .container {
+      background-color: var.$color-dark-blue;
       display: flex;
       flex-direction: column;
       align-items: center;
+      padding: var.$section-spacing 0;
+      width: 100%;
    }
 
    .section-title {
