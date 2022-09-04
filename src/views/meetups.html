@@ -48,10 +48,7 @@
                <div class="circle-ripple circle-ripple--md"></div>
                <div class="circle-ripple circle-ripple"></div>
                <div class="circle-container">
-                  <img
-                     src="https://via.placeholder.com/200"
-                     alt="imagen del expositor"
-                  />
+                  <img src="https://via.placeholder.com/200" alt="imagen del expositor" />
                </div>
             </div>
          </div>
@@ -66,33 +63,7 @@
          <h1 class="section-title">Meetups anteriores</h1>
          <div class="meetups-list">
             <strong class="bracket">[</strong>
-            <pre>
-               <code>{ 
-                     <span>date:</span> "Ago. 13 2022", 
-                     <span>log:</span> "meetup", 
-                     <span>author:</span> "Raul Ruiz", 
-                     <span>url:</span> "https://youtube.com", 
-                     <span>body:</span> "This is some description", 
-                  },</code>
-            </pre>
-            <pre>
-               <code>{ 
-                     <span>date:</span> "Ago. 13 2022", 
-                     <span>log:</span> "meetup", 
-                     <span>author:</span> "Raul Ruiz", 
-                     <span>url:</span> "https://youtube.com", 
-                     <span>body:</span> "This is some description", 
-                  },</code>
-            </pre>
-            <pre>
-               <code>{ 
-                     <span>date:</span> "Ago. 13 2022", 
-                     <span>log:</span> "meetup", 
-                     <span>author:</span> "Raul Ruiz", 
-                     <span>url:</span> "https://youtube.com", 
-                     <span>body:</span> "This is some description", 
-                  },</code>
-            </pre>
+            <div id="list"></div>
             <strong class="bracket bracket--end">]</strong>
          </div>
       </div>
@@ -109,3 +80,18 @@
       <img src="../assets/images/meetups_icon.png" alt="icono de meetups" />
    </section>
 </div>
+
+<script>
+   fetch('/assets/data/meetups.json')
+      .then((response) => response.json())
+      .then((meetups) => {
+         meetups.forEach(mt => {
+            var str = "<pre><code>{</br>";
+            Object.keys(mt).forEach(key => {
+               str += '<span>' + key + ':</span> ' + mt[key] + '</br>';
+            });
+            str += "}</code></pre>"
+            document.getElementById('list').insertAdjacentHTML('beforeend', str);
+         });
+      });
+</script>

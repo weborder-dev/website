@@ -1,0 +1,34 @@
+[
+    {
+        "date": "13-08-2021",
+        "log": "meetup",
+        "author": "Raul Ruiz",
+        "url": "https://youtube.com",
+        "body": "This is some description",
+        "isVirtual": true
+    },
+    {
+        "date": "23-08-2021",
+        "log": "activity",
+        "author": "Raul Ruiz",
+        "url": "https://youtube.com",
+        "body": "This is some description for activity",
+        "isVirtual": false
+    },
+    {
+        "date": "13-10-2021",
+        "log": "meetup",
+        "author": "Raul Ruiz",
+        "url": "https://youtube.com",
+        "body": "This is some description",
+        "isVirtual": true
+    },
+    {
+        "date": "13-11-2022",
+        "log": "meetup",
+        "author": "Raul Ruiz",
+        "url": "https://youtube.com",
+        "body": "This is some description",
+        "isVirtual": true
+    }
+]
