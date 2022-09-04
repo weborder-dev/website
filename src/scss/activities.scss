@@ -1,0 +1,56 @@
+@use './variables.scss' as var;
+
+.activities {
+   background-color: var.$color-dark-blue;
+   padding-top: 8rem;
+
+   .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+   }
+
+   .section-title {
+      color: var.$color-light;
+      flex-shrink: 0;
+      width: 100%;
+      max-width: 730px;
+      margin-top: 1rem;
+      margin-bottom: 3rem;
+   }
+
+   .activites-list {
+      flex-shrink: 0;
+      width: 100%;
+      max-width: 730px;
+      border-left: 2px solid var.$color-secondary;
+      padding: 1px 0 0 1rem;
+   }
+
+   .bracket {
+      color: var.$color-secondary;
+      display: block;
+      margin-top: 2px;
+      margin-bottom: 1rem;
+
+      &--end {
+         margin-top: 1rem;
+         margin-bottom: 0;
+      }
+   }
+
+   pre {
+      background-color: var.$color-medium-blue;
+      color: var.$color-light;
+      margin-bottom: 1rem;
+      white-space: pre-line;
+      padding: 1rem;
+      line-height: 1rem;
+      font-family: 'Gordita';
+
+      span {
+         color: var.$color-secondary;
+         margin-left: 16px;
+      }
+   }
+}
