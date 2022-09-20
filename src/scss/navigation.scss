@@ -137,7 +137,7 @@
 }
 
 @media screen and (min-width: var.$resolution-medium) {
-   .navigation {
+   .navigation {     
       #menuToggle {
          span {
             background: var.$color-light;
@@ -148,6 +148,11 @@
 
 @media screen and (min-width: var.$resolution-large) {
    .navigation {
+      
+      &.light-text #menuToggle #menu li{
+         color: var.$color-light;
+      }
+      
       &.scrolling {
          #menuToggle #menu {
             li {
@@ -176,7 +181,7 @@
             transition: all 0s;
 
             li {
-               color: var.$color-light;
+               color: var.$color-primary;
                margin-left: 1.5em;
                padding: 1em 0;
                font-family: 'Gordita Bold';
