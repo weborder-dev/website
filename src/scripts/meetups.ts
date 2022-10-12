@@ -61,8 +61,6 @@ class Meetups {
                         }
 
                         if(isDateKey) {
-                            console.log("currentKeyValue", currentKeyValue);
-                            
                             const dateFormat = dayjs(currentKeyValue, "DD-MM-YYYY").format('LL').toString()
                             str += '<span>' + key + ':</span> ' + dateFormat + '</br>';
                         }
