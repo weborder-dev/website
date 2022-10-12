@@ -76,7 +76,7 @@ class Meetups {
         }
     }
 
-    loadNextMeetup(meetup: any) {
+    loadNextMeetup(meetup: MeetupInterface) {
         const nextMeetupTitle = document.getElementById("next-meetup-body");
         const nextMeetupAuthor = document.getElementById("next-meetup-author");
 
