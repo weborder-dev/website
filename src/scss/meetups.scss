@@ -197,6 +197,12 @@ $spacing-lg: 250px;
          span {
             color: var.$color-secondary;
             margin-left: 16px;
+            margin-top: 8px;
+            display: inline-block;
+         }
+
+         a {
+            color: var.$color-yellow;
          }
       }
    }

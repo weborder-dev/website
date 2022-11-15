@@ -1,34 +1,200 @@
 [
     {
-        "date": "13-08-2021",
-        "log": "meetup",
-        "author": "Raul Ruiz",
-        "url": "https://youtube.com",
-        "body": "This is some description",
-        "isVirtual": true
+        "date": "03-10-2020",
+        "log": "WeBorder 1: Migrando a React",
+        "author": "Raúl Ruiz",
+        "url": "",
+        "body": "Raúl Ruiz nos platicará sobre su experiencia con React y porque decidió personalmente usar esa tecnología después de haber utilizado AngularJS por un tiempo. De igual manera explicará un caso en la vida real en donde se hizo el estudio en toda la empresa para utilizar React como tecnología de Front End para todas las aplicaciones web.",
+        "isVirtual": true,
+        "image": ""
     },
     {
-        "date": "23-08-2021",
-        "log": "activity",
-        "author": "Raul Ruiz",
-        "url": "https://youtube.com",
-        "body": "This is some description for activity",
-        "isVirtual": false
+        "date": "07-11-2020",
+        "log": "WeBorder 2: Visiones divergentes - México y Estados Unidos",
+        "author": "Germán Rocha",
+        "url": "https://www.youtube.com/watch?v=cWptvtKg0Ns",
+        "body": "Germán Rocha, fundador del Taller de desarrollo web, nos va a platicar sobre el trabajo remoto en EE. UU y cómo nos podemos beneficiar de esta relación para fomentar la innovación en México.",
+        "isVirtual": true,
+        "image": ""
     },
     {
-        "date": "13-10-2021",
-        "log": "meetup",
-        "author": "Raul Ruiz",
-        "url": "https://youtube.com",
-        "body": "This is some description",
-        "isVirtual": true
+        "date": "05-12-2020",
+        "log": "WeBorder 3: Emprendimiento y desarrollo de negocios.",
+        "author": "Victor Talamantes, Alfonso Othon, Carlos Cortés, Juan Muñoz",
+        "url": "",
+        "body": "Mesa redonda con personajes del medio empresarial y tecnológico de la región en donde platicaremos sobre emprendimiento y desarrollo de negocios tecnológicos.",
+        "isVirtual": true,
+        "image": ""
     },
     {
-        "date": "13-11-2022",
-        "log": "meetup",
-        "author": "Raul Ruiz",
-        "url": "https://youtube.com",
-        "body": "This is some description",
-        "isVirtual": true
+        "date": "09-01-2021",
+        "log": "WeBorder 4: Planes 2021",
+        "author": "Victor Talamantes, Raúl Ruiz",
+        "url": "",
+        "body": "Plática breve de planes de la comunidad para el 2021.",
+        "isVirtual": true,
+        "image": ""
+    },
+    {
+        "date": "06-02-2021",
+        "log": "WeBorder 5: Tecnología de contenedores",
+        "author": "Luis Carrasco",
+        "url": "https://www.youtube.com/watch?v=dcS6546lDX4",
+        "body": "Luis Carrasco platica sobre la tecnología de contenedores y sus aplicaciones.",
+        "isVirtual": true,
+        "image": ""
+    },
+    {
+        "date": "06-03-2021",
+        "log": "WeBorder 6: Smart contracts con Juan Muñoz",
+        "author": "Juan Muñoz",
+        "url": "",
+        "body": "Juan Muñoz habla sobre los Smart Contracts.",
+        "isVirtual": true,
+        "image": ""
+    },
+    {
+        "date": "20-03-2021",
+        "log": "WeBorder 7: De cero a serverless en 60 segundos multicloud",
+        "author": "Efren Gonzalez",
+        "url": "https://www.youtube.com/watch?v=pIz7Tbjg2ec",
+        "body": "Efren Gonzalez nos hablará sobre Serverless y un framework open source para poder implementar nuestra tecnología en nuestros servidores.",
+        "isVirtual": true,
+        "image": ""
+    },
+    {
+        "date": "03-04-2021",
+        "log": "WeBorder 8: Nodejs a 12 años de su aparición, hechos y perspectivas",
+        "author": "Ángel Hernandez",
+        "url": "",
+        "body": "Ángel Hernandez platica sobre Nodejs, el ambiente para correr Javascript en los servidores. Una plática excelente para los principiantes que busquen conocer más sobre el desarrollo de backend.",
+        "isVirtual": true,
+        "image": ""
+    },
+    {
+        "date": "17-04-2021",
+        "log": "WeBorder 9: Introducción al Diseño UI / UX",
+        "author": "Sandra Barrón",
+        "url": "https://www.youtube.com/watch?v=kOeaD8hmMAs",
+        "body": "Introducción al diseño UX / UI una parte muy importante del desarrollo web. Una plática excelente para los principiantes o recién graduados que busquen conocer más sobre este tema y que puedan tener una mayor perspectiva en el área laboral",
+        "isVirtual": true,
+        "image": ""
+    },
+    {
+        "date": "01-05-2021",
+        "log": "WeBorder 10: SEO y la importancia de aparecer en Google",
+        "author": "Leopoldo Astorga, Diego Castelao",
+        "url": "",
+        "body": "¿Qué es el SEO y por que es importante aparecer en Google? Una plática introductoria que nos ayudará a expandir nuestro conocimiento en esta rama de la industria IT.",
+        "isVirtual": true,
+        "image": ""
+    },
+    {
+        "date": "15-05-2021",
+        "log": "WeBorder 11: Kubernetes 101, del Punto de Vista del Desarrollador",
+        "author": "Efren Gonzalez",
+        "url": "",
+        "body": "Plática introductoria a Kubernetes o K8s.",
+        "isVirtual": true,
+        "image": ""
+    },
+    {
+        "date": "05-06-2021",
+        "log": "WeBorder 12: Introducción a Next.js",
+        "author": "Raúl Ruiz Ramirez",
+        "url": "https://www.youtube.com/watch?v=qqAGwuJqwoo",
+        "body": "Plática introductoria a framework de NextJs, utilizado para construir aplicaciones con React.",
+        "isVirtual": true,
+        "image": ""
+    },
+    {
+        "date": "03-07-2021",
+        "log": "WeBorder 13: Scrum Best Practices",
+        "author": "Laura Chavez",
+        "url": "https://www.youtube.com/watch?v=yzkHyQ7YrVo",
+        "body": "Plática sobre scrum best practices, ésta es un área muy importante en el mundo de IT para el desarrollo de proyectos.",
+        "isVirtual": true,
+        "image": ""
+    },
+    {
+        "date": "07-08-2021",
+        "log": "WeBorder 14: El Potencial de la zona Borderplex como polo de desarrollo tecnológico",
+        "author": "Carlos Cortés, Victor Talamantes, Efren Gonzalez, Jonathan Bautista",
+        "url": "",
+        "body": "Panel de miembros de la comunidad que nos van a platicar sobre el potencial de la zona Borderplex como polo de desarrollo tecnológico desde sus diferentes puntos de vista.",
+        "isVirtual": true,
+        "image": ""
+    },
+    {
+        "date": "04-09-2021",
+        "log": "WeBorder 15: Desarrollo de Apps Distribuidas basadas en Eventos",
+        "author": "Efren Gonzalez",
+        "url": "https://www.youtube.com/watch?v=EN9sV4MwAEY",
+        "body": " Efrén nos hablará sobre el desarrollo de aplicaciones distribuidas basadas en eventos.",
+        "isVirtual": true,
+        "image": ""
+    },
+    {
+        "date": "09-10-2021",
+        "log": "WeBorder 16: Micro servicios",
+        "author": "César Castillo Moreno",
+        "url": "https://www.youtube.com/watch?v=RbkmcQFZi5c",
+        "body": "César Castillo Moreno expondrá un breve concepto de micro servicios utilizando API gateway y lambda de AWS",
+        "isVirtual": true,
+        "image": ""
+    },
+    {
+        "date": "06-11-2021",
+        "log": "WeBorder 17: Introducción al machine learning",
+        "author": "Javier Flores",
+        "url": "https://www.youtube.com/watch?v=5uxCwHjIwxw",
+        "body": "Introducción al machine learning.",
+        "isVirtual": true,
+        "image": ""
+    },
+    {
+        "date": "04-12-2021",
+        "log": "WeBorder 18: Contenedores 101",
+        "author": "Efren Gonzalez",
+        "url": "https://www.youtube.com/watch?v=kT-0RqSwLGE",
+        "body": "Reunión semi-presencial en donde hablamos sobre contenedores docker.",
+        "isVirtual": false,
+        "image": ""
+    },
+    {
+        "date": "12-02-2022",
+        "log": "WeBorder 19: Introducción a Laravel/Lumen para el desarrollo de APIs",
+        "author": "Victor Talamantes",
+        "url": "https://www.youtube.com/watch?v=5Tlkx5s-3bs",
+        "body": "Introducción a Laravel/Lumen para el desarrollo de APIs.",
+        "isVirtual": true,
+        "image": ""
+    },
+    {
+        "date": "19-03-2022",
+        "log": "WeBorder 20: APIs con .NET 6",
+        "author": "Efren Gonzalez",
+        "url": "https://www.youtube.com/watch?v=5Tlkx5s-3bs",
+        "body": "Plática sobre el desarrollo de APIS con .NET 6.",
+        "isVirtual": true,
+        "image": ""
+    },
+    {
+        "date": "23-04-2022",
+        "log": "WeBorder 21: Git para principiantes",
+        "author": "Raúl Ruiz Ramirez",
+        "url": "https://www.youtube.com/watch?v=y_Xw3qWBTns&t=3128s",
+        "body": " Raúl Ruiz habla sobre la herramienta de Git. Es una sesión excelente para principiantes que quieran saber cómo utilizar esta herramienta básica para el desarrollo de software",
+        "isVirtual": true,
+        "image": ""
+    },
+    {
+        "date": "11-06-2022",
+        "log": "WeBorder 22: Website WeBorder",
+        "author": "Victor Talamantes, Raúl Ruiz, Efren Gonzalez",
+        "url": "https://www.youtube.com/watch?v=y_Xw3qWBTns&t=3128s",
+        "body": "Plática donde hablamos de nuestro proyecto open source del sitio web de WeBorder, el cual explicamos el flujo de trabajo y como poder colaborar para el desarrollo del mismo.",
+        "isVirtual": true,
+        "image": ""
     }
 ]

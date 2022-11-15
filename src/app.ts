@@ -9,3 +9,4 @@ import './scss/activities.scss';
 
 // Import TS files here
 import './scripts/navigation.ts';
+import './scripts/meetups.ts';
