@@ -29,7 +29,8 @@ class Navigation {
 
       if (isIndex) {
          document.querySelector(hashString!)!.scrollIntoView({
-            behavior: 'smooth'
+            behavior: 'smooth',
+            block: 'center'
          });
       } else {
          window.location.assign('/index.html' + hashString);
@@ -40,22 +41,24 @@ class Navigation {
       if (document.documentElement.scrollTop > 50) {
          document.querySelector('.navigation')?.classList.add('scrolling');
 
-         if(this.isLandingPage) {
-            document.querySelector('.navigation')?.classList.remove('light-text');
+         if (this.isLandingPage) {
+            document
+               .querySelector('.navigation')
+               ?.classList.remove('light-text');
          }
       } else {
          document.querySelector('.navigation')?.classList.remove('scrolling');
 
-         if(this.isLandingPage) {
+         if (this.isLandingPage) {
             document.querySelector('.navigation')?.classList.add('light-text');
          }
       }
-   }
+   };
 
    isPageLandingPage(): boolean {
       const currentURL = window.location.pathname;
       return Boolean(currentURL === '/' || currentURL.includes('index.html'));
-    }
+   }
 }
 
 new Navigation();
