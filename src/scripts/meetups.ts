@@ -1,99 +1,134 @@
-import dayjs from 'dayjs'
-import 'dayjs/locale/es-mx'
+import dayjs from 'dayjs';
+import 'dayjs/locale/es-mx';
 
-var customParseFormat = require('dayjs/plugin/customParseFormat')
-var localizedFormat = require('dayjs/plugin/localizedFormat')
-dayjs.extend(customParseFormat)
+var customParseFormat = require('dayjs/plugin/customParseFormat');
+var localizedFormat = require('dayjs/plugin/localizedFormat');
+dayjs.extend(customParseFormat);
 dayjs.extend(localizedFormat);
-dayjs.locale('es-mx')
+dayjs.locale('es-mx');
 
 interface MeetupInterface {
-    date: string;
-    log: string;
-    author: string;
-    url: string;
-    body: string;
-    isVirtual: boolean;
-    image: string;
+   date: string;
+   log: string;
+   author: string;
+   url: string;
+   body: string;
+   isVirtual: boolean;
+   image: string;
 }
 
 type MeetupKey = keyof MeetupInterface;
 
-
 class Meetups {
-    isMeetupsPage: boolean;
- 
-    constructor() {
-        this.isMeetupsPage = this.isPageMeetupsPage();
+   isMeetupsPage: boolean;
 
-        window.addEventListener('load', () => {
-            this.onPageLoad();
-          });
-    }
+   constructor() {
+      this.isMeetupsPage = this.isPageMeetupsPage();
 
-    onPageLoad() {
-        
-        if(this.isMeetupsPage) {
-            fetch('../assets/data/meetups.json')
+      window.addEventListener('load', () => {
+         this.onPageLoad();
+      });
+   }
+
+   onPageLoad() {
+      if (this.isMeetupsPage) {
+         fetch('../assets/data/meetups.json')
             .then((response) => response.json())
-            .then((meetups:MeetupInterface[]) => {
-                let sortedMeetups: MeetupInterface[] = [...meetups];
-                sortedMeetups.reverse();
-                
-                sortedMeetups.forEach((mt: MeetupInterface) => {
-                    var str = "<pre><code>{</br>";
-                    Object.keys(mt).forEach((key) => {
-                    if(key) {
-                        
-                        const isDateKey = key === "date";
-                        const isImageKey = key === "image";
-                        const isVirtualKey = key === "isVirtual";
-                        const isUrlKey = key === "url";
-                        const currentKeyValue= mt[key as MeetupKey] as typeof key;
-                        const isUrlEmpty = currentKeyValue === "";
-        
-                        if(!(isImageKey || isVirtualKey || isUrlKey || isDateKey)) {
-                            str += '<span>' + key + ':</span> ' + currentKeyValue + '</br>';
-                        }
-        
-                        if(isUrlKey && !isUrlEmpty) {
-                            str += `<span>${key}:</span> <a target="_blank" href="${currentKeyValue}">${currentKeyValue}</a></br>`;
+            .then((meetups: MeetupInterface[]) => {
+               let sortedMeetups: MeetupInterface[] = [...meetups];
+               sortedMeetups.reverse();
+
+               sortedMeetups.forEach((mt: MeetupInterface) => {
+                  var str = '<pre><code>{</br>';
+                  Object.keys(mt).forEach((key) => {
+                     if (key) {
+                        const isDateKey = key === 'date';
+                        const isImageKey = key === 'image';
+                        const isVirtualKey = key === 'isVirtual';
+                        const isUrlKey = key === 'url';
+                        const currentKeyValue = mt[
+                           key as MeetupKey
+                        ] as typeof key;
+                        const isUrlEmpty = currentKeyValue === '';
+
+                        if (
+                           !(
+                              isImageKey ||
+                              isVirtualKey ||
+                              isUrlKey ||
+                              isDateKey
+                           )
+                        ) {
+                           str +=
+                              '<span>' +
+                              key +
+                              ':</span> ' +
+                              currentKeyValue +
+                              '</br>';
                         }
 
-                        if(isDateKey) {
-                            const dateFormat = dayjs(currentKeyValue, "DD-MM-YYYY").format('LL').toString()
-                            str += '<span>' + key + ':</span> ' + dateFormat + '</br>';
+                        if (isUrlKey && !isUrlEmpty) {
+                           str += `<span>${key}:</span> <a target="_blank" href="${currentKeyValue}">${currentKeyValue}</a></br>`;
                         }
-                    }
-                    });
-                    str += "}</code></pre>";
-                    document.getElementById('list')?.insertAdjacentHTML('beforeend', str);
-                });
-                
 
-                this.loadNextMeetup(sortedMeetups[0]);
+                        if (isDateKey) {
+                           const dateFormat = dayjs(
+                              currentKeyValue,
+                              'DD-MM-YYYY'
+                           )
+                              .format('LL')
+                              .toString();
+                           str +=
+                              '<span>' +
+                              key +
+                              ':</span> ' +
+                              dateFormat +
+                              '</br>';
+                        }
+                     }
+                  });
+                  str += '}</code></pre>';
+                  document
+                     .getElementById('list')
+                     ?.insertAdjacentHTML('beforeend', str);
+               });
+
+               this.loadNextMeetup(sortedMeetups[0]);
             });
-        }
-    }
+      }
+   }
 
-    loadNextMeetup(meetup: MeetupInterface) {
-        const nextMeetupTitle = document.getElementById("next-meetup-body");
-        const nextMeetupAuthor = document.getElementById("next-meetup-author");
+   loadNextMeetup(meetup: MeetupInterface) {
+      const nextMeetupTitle = document.getElementById('next-meetup-body');
+      const nextMeetupAuthor = document.getElementById('next-meetup-author');
+      const nextMeetupDate = document.getElementById('next-meetup-date');
+      const nextMeetupImage: HTMLImageElement | null = document.getElementById(
+         'next-meetup-image'
+      ) as HTMLImageElement;
 
-        if(nextMeetupTitle) {
-            nextMeetupTitle.innerText = meetup.log;
-        }
+      if (nextMeetupTitle) {
+         nextMeetupTitle.innerText = meetup.log;
+      }
 
-        if(nextMeetupAuthor) {
-            nextMeetupAuthor.innerText = meetup.author;
-        }   
-    }
- 
-    isPageMeetupsPage(): boolean {
-       const currentURL = window.location.pathname;
-       return Boolean(currentURL.includes('meetups'));
-     }
- }
- 
- new Meetups();
- 
+      if (nextMeetupAuthor) {
+         nextMeetupAuthor.innerText = meetup.author;
+      }
+
+      if (nextMeetupDate) {
+         nextMeetupDate.innerText = dayjs(meetup.date, 'DD-MM-YYYY')
+            .format('LL')
+            .toString();
+      }
+
+      if (nextMeetupImage && meetup.image) {
+         nextMeetupImage.src = `../assets/images/meetups/hosts/${meetup.image}`;
+      }
+   }
+
+   isPageMeetupsPage(): boolean {
+      const currentURL = window.location.pathname;
+      return Boolean(currentURL.includes('meetups'));
+   }
+}
+
+new Meetups();
