@@ -130,7 +130,7 @@ class Meetups {
 
    isPageMeetupsPage(): boolean {
       const currentURL = window.location.pathname;
-      return Boolean(currentURL.includes('meetups'));
+      return Boolean(currentURL.includes('meetups')) || Boolean(currentURL.includes('index.html'));
    }
 }
 

@@ -133,25 +133,6 @@
          padding-bottom: 0;
       }
 
-      .about-text {
-         margin: 0 auto;
-         text-align: center;
-
-         font-size: 1.2rem;
-         line-height: 1.8rem;
-
-         h2 {
-            font-size: 2rem;
-            padding-bottom: 1rem;
-            font-family: 'Gordita Semibold';
-            color: var.$color-primary;
-         }
-
-         @media screen and (min-width: var.$resolution-large) {
-            max-width: 50%;
-         }
-      }
-
       .about-cards {
          margin: 4rem auto 0 auto;
 
@@ -212,4 +193,45 @@
          }
       }
    }
+
+   #landing-meetups {
+      padding: var.$section-spacing * 2 0 var.$section-spacing 0;
+      background: #15073c;
+      color: white;
+
+      h2 {
+         color: white;
+      }
+
+      @import url('../scss/meetups.scss');
+
+      .intro {
+         transform: translateY(-50%);
+         margin-bottom: 4rem;
+      }
+
+      .margin-bottom {
+         margin-bottom: 8rem;
+      }
+   }
+
+   .section-header-text {
+      margin: 0 auto;
+      text-align: center;
+
+      font-size: 1.2rem;
+      line-height: 1.8rem;
+
+      h2 {
+         font-size: 2rem;
+         padding-bottom: 1rem;
+         font-family: 'Gordita Semibold';
+         color: var.$color-primary;
+      }
+
+      @media screen and (min-width: var.$resolution-large) {
+         max-width: 50%;
+      }
+   }
+
 }

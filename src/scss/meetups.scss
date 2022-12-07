@@ -3,7 +3,8 @@
 $spacing: 300px;
 $spacing-lg: 250px;
 
-.meetups {
+.meetups,
+#landing-meetups {
    .intro {
       display: flex;
       flex-direction: column;
