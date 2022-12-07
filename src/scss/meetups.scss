@@ -19,13 +19,17 @@ $spacing-lg: 250px;
       }
 
       .section-title {
-         margin-bottom: 32px;
+         font-size: 2rem;
+         padding-bottom: 1rem;
+         font-family: "Gordita Semibold";
+         color: #6c0ab3;
       }
 
       p {
          max-width: 600px;
          margin-bottom: 32px;
-         line-height: 1.4rem;
+         line-height: 1.8rem;
+         font-size: 1.2rem;
       }
 
       #virtual-btn {
