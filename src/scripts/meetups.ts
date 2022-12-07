@@ -38,7 +38,10 @@ class Meetups {
                let sortedMeetups: MeetupInterface[] = [...meetups];
                sortedMeetups.reverse();
 
-               sortedMeetups.forEach((mt: MeetupInterface) => {
+               this.loadNextMeetup(sortedMeetups[0]);
+
+               let lastMeetups = sortedMeetups.slice(1, sortedMeetups.length);
+               lastMeetups.forEach((mt: MeetupInterface) => {
                   var str = '<pre><code>{</br>';
                   Object.keys(mt).forEach((key) => {
                      if (key) {
@@ -93,7 +96,6 @@ class Meetups {
                      ?.insertAdjacentHTML('beforeend', str);
                });
 
-               this.loadNextMeetup(sortedMeetups[0]);
             });
       }
    }
@@ -122,6 +124,17 @@ class Meetups {
 
       if (nextMeetupImage && meetup.image) {
          nextMeetupImage.src = `../assets/images/meetups/hosts/${meetup.image}`;
+      }
+
+      // Hide next meetup sign if today is greater than 
+      // meetup date
+      let currentDate = new Date();
+      let dateString = String(currentDate.getDate()).padStart(2, '0') + '-' + (1 + currentDate.getMonth()) + '-' + currentDate.getFullYear();
+      let meetupDate = dayjs(meetup.date, 'DD-MM-YYYY');
+      let todayDate = dayjs(dateString, 'DD-MM-YYYY');
+
+      if (todayDate.isAfter(meetupDate)) {
+         document.getElementById('next-meetup-sign')!.classList.add('hide');
       }
    }
 

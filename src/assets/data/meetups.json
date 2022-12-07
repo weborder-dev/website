@@ -205,5 +205,14 @@
       "body": "Plática de Andrea Balam en donde nos presenta Solid JS, una librería de Javascript.",
       "isVirtual": true,
       "image": "andreaBalam.jpg"
+   },
+   {
+      "date": "10-12-2022",
+      "log": "WeBorder 24: Reunión de fin de año",
+      "author": "Comunidad de WeBorder",
+      "url": "",
+      "body": "Reunión de fin de año donde se realizan diversas actividades de convivencia, Victor Talamantes presenta PseudoFlow y Efrén González imparte plática sobre 3 formas de hacer IaS.",
+      "isVirtual": false,
+      "image": "2022.jpg"
    }
 ]
