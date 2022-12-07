@@ -42,7 +42,7 @@ class Meetups {
 
                let lastMeetups = sortedMeetups.slice(1, sortedMeetups.length);
                lastMeetups.forEach((mt: MeetupInterface) => {
-                  var str = '<pre><code>{</br>';
+                  var str = '<pre><code>{<br>';
                   Object.keys(mt).forEach((key) => {
                      if (key) {
                         const isDateKey = key === 'date';
@@ -62,16 +62,11 @@ class Meetups {
                               isDateKey
                            )
                         ) {
-                           str +=
-                              '<span>' +
-                              key +
-                              ':</span> ' +
-                              currentKeyValue +
-                              '</br>';
+                           str += `<span>${key}:</span> "${currentKeyValue}",<br>`;
                         }
 
                         if (isUrlKey && !isUrlEmpty) {
-                           str += `<span>${key}:</span> <a target="_blank" href="${currentKeyValue}">${currentKeyValue}</a></br>`;
+                           str += `<span>${key}:</span> "<a target="_blank" href="${currentKeyValue}">${currentKeyValue}</a>",<br>`;
                         }
 
                         if (isDateKey) {
@@ -81,12 +76,7 @@ class Meetups {
                            )
                               .format('LL')
                               .toString();
-                           str +=
-                              '<span>' +
-                              key +
-                              ':</span> ' +
-                              dateFormat +
-                              '</br>';
+                           str += `<span>${key}:</span> ${dateFormat},<br>`;
                         }
                      }
                   });
