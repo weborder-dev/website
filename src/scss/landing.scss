@@ -16,7 +16,7 @@
          padding-bottom: var.$section-spacing;
          p {
             font-size: 1.2rem;
-            line-height: 1.5rem;
+            line-height: 1.8rem;
          }
          a {
             text-decoration: none;
@@ -180,6 +180,22 @@
                max-width: 350px;
             }
 
+            p {
+               text-align: center;
+               bottom: 3rem;
+               font-weight: bold;
+               line-height: 1.5;
+               font-size: 1.6rem;
+
+               @media screen and (min-width: var.$resolution-large) {
+                  position: absolute;
+                  left: 50%;
+                  transform: translateX(-50%);
+                  color: white;
+                  margin: 0;
+               }
+            }
+
             @media screen and (min-width: var.$resolution-large) {
                display: flex;
                justify-content: center;
@@ -191,25 +207,6 @@
                }
                .card-icon {
                   display: none;
-               }
-            }
-
-            p {
-               text-align: center;
-
-               bottom: 3rem;
-
-               font-weight: bold;
-               line-height: 1.5;
-               font-size: 1.6rem;
-
-               @media screen and (min-width: var.$resolution-large) {
-                  position: absolute;
-                  left: 50%;
-                  transform: translateX(-50%);
-                  color: white;
-                  font-size: 1.2rem;
-                  margin: 0;
                }
             }
          }
