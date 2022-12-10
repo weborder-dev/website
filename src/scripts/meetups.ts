@@ -23,7 +23,7 @@ class Meetups {
    isMeetupsPage: boolean;
 
    constructor() {
-      this.isMeetupsPage = this.isPageMeetupsPage();
+      this.isMeetupsPage = true;
 
       window.addEventListener('load', () => {
          this.onPageLoad();
