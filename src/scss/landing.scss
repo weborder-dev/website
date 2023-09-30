@@ -206,8 +206,15 @@
       @import url('../scss/meetups.scss');
 
       .intro {
-         transform: translateY(-50%);
-         margin-bottom: 4rem;
+         padding: 0;
+      }
+
+      @media screen and (min-width: var.$resolution-large) {
+         .intro {
+            padding: 8rem 0 0;
+            transform: translateY(-50%);
+            margin-bottom: 4rem;
+         }
       }
 
       .margin-bottom {
@@ -233,5 +240,4 @@
          max-width: 55%;
       }
    }
-
 }

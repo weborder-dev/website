@@ -214,5 +214,14 @@
       "body": "Reunión de fin de año donde se realizan diversas actividades de convivencia, Victor Talamantes presenta PseudoFlow y Efrén González imparte plática sobre 3 formas de hacer IaS.",
       "isVirtual": false,
       "image": "2022.jpg"
+   },
+   {
+      "date": "16-02-2023",
+      "log": "WeBorder 25: Infrastructure as code con Efrén González",
+      "author": "Efren Gonzalez",
+      "url": "https://www.youtube.com/watch?v=SkySvykZmUk",
+      "body": "Plática sobre Infrastructure as code donde Efrén nos platica sobre Terraform y sobre Crossplane.",
+      "isVirtual": true,
+      "image": "efren.jpg"
    }
 ]
