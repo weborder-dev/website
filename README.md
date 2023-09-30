@@ -34,10 +34,10 @@ https://prettier.io/docs/en/configuration.html
 
 **Estructura de folders** <br>
 
-- /src
-  - /assets: Imágenes, tipografías, entre otros.
-  - /scripts: Archivos TypeScript que son transpilados a JS
-  - /scss: Archivos Sass que son transpilados a CSS
+-  /src
+   -  /assets: Imágenes, tipografías, entre otros.
+   -  /scripts: Archivos TypeScript que son transpilados a JS
+   -  /scss: Archivos Sass que son transpilados a CSS
 
 ## Uso
 
@@ -61,6 +61,8 @@ A todos los miembros y sus aportaciones.
 ## Otras ligas de intéres
 
 Nuestro sitio: https://www.weborder.dev<br>
+Instagram: https://www.instagram.com/weborder_devs/<br />
+Canal de youtube: https://www.youtube.com/@weborderdevelopers6446<br />
 Comunidad de facebook: https://www.facebook.com/groups/weborderdev<br>
 Nuestro servidor de discord: https://discord.gg/pGg96N5RVF<br>
 
